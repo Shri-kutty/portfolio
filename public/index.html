@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shri Jeevanya Priya — Portfolio</title>
+
+  <link rel="stylesheet" href="css/style.css">
+<script src="js/script.js"></script>
+<lottie-player src="assets/lottie-loader.json"></lottie-player>
+
+</head>
+<body>
+  <div id="loader" class="loader">
+    <lottie-player src="assets/lottie-loader.json" background="transparent" speed="1" loop autoplay style="width:160px;"></lottie-player>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <div class="logo"><span class="logo-s">s</span><span class="logo-j">j</span><span class="logo-p">p</span></div>
+
+      <nav class="navlinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#internships">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌞</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+
+        <div class="hero-left">
+          <h1 class="hero-title">Hi, I'm <span class="name-gradient">Shri Jeevanya Priya</span></h1>
+          <p class="subtitle">Mobile App Developer</p>
+          <p class="intro">I am a passionate developer and lifelong learner, dedicated to building beautiful, functional, and user-centric digital experiences.</p>
+
+          <div class="cta-row">
+            <a id="downloadBtn" class="btn primary" href="/download-resume"><span>Download Resume</span></a>
+            <button id="contactBtn" class="btn outline">Contact Me ✉️</button>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="photo-wrap">
+            <div class="photo-glow"></div>
+            <div class="photo">
+              <img id="profilePhoto" src="assets/profile-placeholder.jpg" alt="Profile Photo" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section> <!-- ✅ FIX ADDED HERE -->
+
+   <!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container about-container">
+
+    <p class="about-subtitle">ABOUT ME</p>
+    <h2 class="section-title about-title">Professional Summary</h2>
+
+    <div class="about-card">
+      <p>
+        A dedicated and proactive individual seeking a responsible position in a reputable organization. 
+        I aim to deliver value through consistent efforts while continuously learning. 
+        I love contributing ideas, collaborating with teams, and growing professionally.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- SKILLS -->
+    <section class="section pale" id="skills">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="muted">My technical toolkit and proficiency</p>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="icon"><></div>
+            <h3>Languages</h3>
+            <div class="tags">
+              <span>Python</span><span>Core Java</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Dart</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="icon">🌐</div>
+            <h3>Frameworks / Libraries</h3>
+            <div class="tags">
+              <span>Streamlit</span><span>Flask</span><span>React Native</span><span>Flutter</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="icon">🗄️</div>
+            <h3>Database</h3>
+            <div class="tags"><span>MySQL (Basics)</span></div>
+          </div>
+
+          <div class="skill-card">
+            <div class="icon">☁️</div>
+            <h3>Cloud & DevOps</h3>
+            <div class="tags"><span>AWS (Lambda, S3, API Gateway)</span></div>
+          </div>
+
+          <div class="skill-card">
+            <div class="icon">🛠️</div>
+            <h3>Tools</h3>
+            <div class="tags"><span>GitHub</span><span>VS Code</span><span>LeetCode</span><span>Canva</span></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-badge">F</div>
+            <h3>Freshify</h3>
+            <p>AI-powered freshness detection for fruits & vegetables using image analysis.</p>
+            <div class="project-tags">
+              <span>AI/ML</span><span>Image Processing</span><span>Python</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge">A</div>
+            <h3>AI Drug Discovery</h3>
+            <p>ML model to predict drug compounds and analyze molecular similarity.</p>
+            <div class="project-tags">
+              <span>Machine Learning</span><span>Bioinformatics</span><span>Data Analysis</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge">A</div>
+            <h3>AI Meeting Buddy</h3>
+            <p>Virtual assistant that summarizes meetings and tracks tasks.</p>
+            <div class="project-tags">
+              <span>NLP</span><span>Automation</span><span>Productivity</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNSHIP EXPERIENCE -->
+    <section class="section pale" id="internships">
+      <div class="container">
+
+        <h2 class="section-title">Internship Experience</h2>
+
+        <div class="intern-grid">
+
+          <div class="intern-card">
+            <span class="intern-date">Jan – Apr 2025</span>
+            <h3>Eazibiz Technologies Pvt Ltd — App Development Intern</h3>
+            <ul>
+              <li>Developed a Leave Submission app</li>
+              <li>React Native + Android Studio</li>
+              <li>Automated approval → notifications → HOD routing</li>
+            </ul>
+          </div>
+
+          <div class="intern-card">
+            <span class="intern-date">Aug 2024</span>
+            <h3>Techsnapie Solutions — AWS Intern</h3>
+            <ul>
+              <li>Hands-on AWS during 14 days</li>
+              <li>Deployed cloud resources efficiently</li>
+              <li>Worked with S3, Lambda and API Gateway</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="achievements">
+  <div class="container">
+    <h2 class="section-title">Achievements</h2>
+
+    <ul class="achievements-list">
+      <li class="ach-item">
+        <span class="ach-icon yellow">🏆</span>
+        <p>1st Prize – Technical Quiz (FiESTAA’25, KPR Institute of Engineering and Technology)</p>
+      </li>
+
+      <li class="ach-item">
+        <span class="ach-icon orange">🎖️</span>
+        <p>3rd Prize – Codeathon (FiESTAA’25, KPR IET)</p>
+      </li>
+
+      <li class="ach-item">
+        <span class="ach-icon pink">🎀</span>
+        <p>Participated in WWT Women-Only Hackathon 2025</p>
+      </li>
+
+      <li class="ach-item">
+        <span class="ach-icon blue">🎽</span>
+        <p>Participated in Code O Clock – 24-hour hackathon</p>
+      </li>
+
+      <li class="ach-item">
+        <span class="ach-icon violet">🥇</span>
+        <p>Participated in TiDB hackathon</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section" id="certifications">
+  <div class="container">
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="cert-container">
+
+      <!-- LEFT -->
+      <div class="cert-card left">
+        <h3 class="cert-title">Human Computer Interaction</h3>
+        <span class="cert-tag">NPTEL • 86%</span>
+        <p class="muted">
+          Studied user-centered design, usability principles, and human–computer interaction models.
+        </p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="cert-card right">
+        <h3 class="cert-title">Programming in Java</h3>
+        <span class="cert-tag">NPTEL • 90%</span>
+        <p class="muted">
+          Covered OOP concepts, exception handling, collections, multithreading, and Java fundamentals.
+        </p>
+      </div>
+
+      <!-- LEFT -->
+      <div class="cert-card left">
+        <h3 class="cert-title">Introduction to Generative AI Concepts</h3>
+        <span class="cert-tag">Microsoft • June 2025</span>
+        <p class="muted">
+          Learned foundations of Generative AI, LLMs, prompt engineering, and real-world AI applications.
+        </p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="cert-card right">
+        <h3 class="cert-title">Python for Placement Readiness</h3>
+        <span class="cert-tag">ByteXL • August 2025</span>
+        <p class="muted">
+          Strengthened Python problem-solving skills focused on placement-level coding questions.
+        </p>
+      </div>
+
+      <!-- LEFT -->
+      <div class="cert-card left">
+        <h3 class="cert-title">Basic Data Structures and Algorithms</h3>
+        <span class="cert-tag">ByteXL • September 2025</span>
+        <p class="muted">
+          Learned arrays, linked lists, stacks, queues, searching, and sorting techniques.
+        </p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="cert-card right">
+        <h3 class="cert-title">Basic DBMS</h3>
+        <span class="cert-tag">ByteXL • September 2025</span>
+        <p class="muted">
+          Covered database concepts, SQL basics, normalization, and relational database design.
+        </p>
+      </div>
+
+      <!-- LEFT -->
+      <div class="cert-card left">
+        <h3 class="cert-title">Generative AI Fundamentals</h3>
+        <span class="cert-tag">Databricks • August 2025</span>
+        <p class="muted">
+          Explored GenAI workflows, model training basics, and real-world AI deployment concepts.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+ <!-- CONTACT -->
+<section class="section pale" id="contact">
+  <div class="container contact-grid">
+
+    <!-- LEFT CONTACT CARDS -->
+    <div class="contact-cards">
+
+      <div class="info-card">
+        <div class="icon">📞</div>
+        <div class="info-text">
+          <p class="muted">Phone</p>
+          <p class="strong">9363641301</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">✉️</div>
+        <div class="info-text">
+          <p class="muted">Email</p>
+          <p class="strong">shrijeevanyapriyaoffc@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">in</div>
+        <div class="info-text">
+          <p class="muted">LinkedIn</p>
+          <p class="strong">
+            <a href="https://www.linkedin.com/in/shri-jeevanya-priya-j/" target="_blank">
+              Connect with me
+            </a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT CONTACT FORM -->
+    <div class="contact-form-container card big">
+      <h3>Get in touch</h3>
+
+      <form id="contactForm">
+        <label>Name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Phone<input type="text" name="phone"></label>
+        <label>Message<textarea name="message" rows="6" required></textarea></label>
+        <button class="btn primary" type="submit">Send Message ✈️</button>
+        <div id="formMsg" class="form-msg"></div>
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="nowYear"></span> Shri Jeevanya Priya</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+  <script>
+  // IntersectionObserver to reveal certificates on scroll
+  (function(){
+    const opts = { root: null, rootMargin: '0px', threshold: 0.12 };
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          // optional: unobserve after revealed so animation runs once
+          observer.unobserve(entry.target);
+        }
+      });
+    }, opts);
+
+    document.querySelectorAll('.cert-card').forEach(el => observer.observe(el));
+  })();
+
+
+  const observerOptions = {
+    threshold: 0.2
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll(".ach-item").forEach(item => observer.observe(item));
+
+
+</script>
+
+
+</body>
+</html>
