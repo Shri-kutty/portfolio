@@ -19,21 +19,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------------- THEME TOGGLE -------------- */
-  const themeToggle = document.getElementById('themeToggle');
-  const body = document.body;
-  const savedTheme = localStorage.getItem('site-theme');
+  /* ---------------- THEME TOGGLE (FIXED) -------------- */
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
 
-  if (savedTheme === 'dark') body.classList.add('dark');
+// Load saved theme
+const savedTheme = localStorage.getItem('site-theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark');
+  if (themeToggle) themeToggle.textContent = '🌙';
+}
 
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark');
-      localStorage.setItem('site-theme', body.classList.contains('dark') ? 'dark' : 'light');
-      themeToggle.textContent = body.classList.contains('dark') ? '🌙' : '🌞';
-    });
-    themeToggle.textContent = body.classList.contains('dark') ? '🌙' : '🌞';
-  }
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const isDark = body.classList.toggle('dark');
+
+    localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
+    themeToggle.textContent = isDark ? '🌙' : '🌞';
+  });
+}
+
 
   /* ---------------- CONTACT BUTTON ------------- */
   const contactBtn = document.getElementById('contactBtn');
