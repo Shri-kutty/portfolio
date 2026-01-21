@@ -702,3 +702,51 @@ body {
   line-height: 1.7;
   color: var(--muted);
 }
+/* =========================
+   🌙 DARK MODE FIX (FINAL)
+========================= */
+
+body.dark {
+  background: linear-gradient(180deg, #0b1020, #081226);
+}
+
+/* Cards */
+body.dark .project-card,
+body.dark .intern-card,
+body.dark .skill-card,
+body.dark .about-card,
+body.dark .contact-form-container,
+body.dark .info-card,
+body.dark .cert-card {
+  background: rgba(15, 20, 28, 0.85) !important;
+  color: #f7f9fb;
+}
+
+/* Text */
+body.dark p,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark span {
+  color: #f7f9fb;
+}
+
+/* Navbar */
+body.dark .navbar {
+  background: rgba(10, 15, 30, 0.85);
+}
+
+/* Inputs */
+body.dark input,
+body.dark textarea {
+  background: rgba(20, 25, 40, 0.9);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Buttons */
+body.dark .btn.outline {
+  border-color: rgba(255,255,255,0.25);
+  color: #ff9acb;
+}
+
