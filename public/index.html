@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,7 +14,7 @@
 
 <body>
   <script>
-    (function() {
+    (function () {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.body.classList.add('dark-mode');
@@ -21,43 +22,38 @@
     })();
   </script>
 
-<!-- LOADER -->
-<div id="loader" class="loader">
-  <lottie-player
-    src="assets/lottie-loader.json"
-    background="transparent"
-    speed="1"
-    loop
-    autoplay
-    style="width:160px;">
-  </lottie-player>
-</div>
-
-<!-- NAVBAR -->
-<header class="navbar" id="navbar">
-  <div class="container nav-inner">
-    <div class="logo">
-      <span class="logo-s">s</span>
-      <span class="logo-j">j</span>
-      <span class="logo-p">p</span>
-    </div>
-
-    <nav class="navlinks">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#internships">Experience</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
-      <span class="sun-icon">☀️</span>
-      <span class="moon-icon">🌙</span>
-    </button>
+  <!-- LOADER -->
+  <div id="loader" class="loader">
+    <lottie-player src="assets/lottie-loader.json" background="transparent" speed="1" loop autoplay
+      style="width:160px;">
+    </lottie-player>
   </div>
-</header>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <div class="logo">
+        <span class="logo-s">s</span>
+        <span class="logo-j">j</span>
+        <span class="logo-p">p</span>
+      </div>
+
+      <nav class="navlinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#internships">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+      </button>
+    </div>
+  </header>
 
 
   <main>
@@ -74,11 +70,12 @@
             </span>
           </p>
           <p class="intro">
-            A results-driven Full Stack Developer and AI Enthusiast. I specialize in building intelligent, scalable digital solutions that bridge the gap between complex AI models and user-centric applications.
+            A results-driven Full Stack Developer and AI Enthusiast. I specialize in building intelligent, scalable
+            digital solutions that bridge the gap between complex AI models and user-centric applications.
           </p>
 
           <div class="cta-row">
-            <a id="downloadBtn" class="btn primary" href="/download-resume"><span>Download Resume</span></a>
+            <a id="downloadBtn" class="btn primary" href="assets/resume.pdf" download="Shri_Jeevanya_Priya_Resume.pdf"><span>Download Resume</span></a>
             <button id="contactBtn" class="btn outline">Contact Me ✉️</button>
           </div>
         </div>
@@ -95,21 +92,25 @@
       </div>
     </section> <!-- ✅ FIX ADDED HERE -->
 
-   <!-- ABOUT -->
-<section class="section" id="about">
-  <div class="container about-container">
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-container">
 
-    <p class="about-subtitle">ABOUT ME</p>
-    <h2 class="section-title about-title">Professional Summary</h2>
+        <p class="about-subtitle">ABOUT ME</p>
+        <h2 class="section-title about-title">Professional Summary</h2>
 
-    <div class="about-card">
-      <p>
-        I am a 3rd-year Computer Science and Engineering student with a deep passion for building intelligent, full-stack digital solutions. My experience spans from developing robust MERN stack applications to integrating advanced AI/ML models into functional platforms. I believe in the power of technology to simplify complex problems, and I am dedicated to continuous learning and contributing innovative ideas to agile teams.
-      </p>
-    </div>
+        <div class="about-card">
+          <p>
+            I am a 3rd-year Computer Science and Engineering student with a deep passion for building intelligent,
+            full-stack digital solutions. My experience spans from developing robust MERN stack applications to
+            integrating advanced AI/ML models into functional platforms. I believe in the power of technology to
+            simplify complex problems, and I am dedicated to continuous learning and contributing innovative ideas to
+            agile teams.
+          </p>
+        </div>
 
-  </div>
-</section>
+      </div>
+    </section>
 
 
     <!-- SKILLS -->
@@ -123,7 +124,8 @@
             <div class="icon">💻</div>
             <h3>Frontend</h3>
             <div class="tags">
-              <span>React.js</span><span>Next.js</span><span>Tailwind CSS</span><span>HTML5/CSS3</span><span>JavaScript (ES6+)</span>
+              <span>React.js</span><span>Next.js</span><span>Tailwind CSS</span><span>HTML5/CSS3</span><span>JavaScript
+                (ES6+)</span>
             </div>
           </div>
 
@@ -144,7 +146,8 @@
           <div class="skill-card">
             <div class="icon">🧠</div>
             <h3>AI/ML</h3>
-            <div class="tags"><span>LLM Integration</span><span>Prompt Engineering</span><span>Python</span><span>Image Processing</span></div>
+            <div class="tags"><span>LLM Integration</span><span>Prompt Engineering</span><span>Python</span><span>Image
+                Processing</span></div>
           </div>
 
           <div class="skill-card">
@@ -156,7 +159,8 @@
           <div class="skill-card">
             <div class="icon">🛠️</div>
             <h3>Tools</h3>
-            <div class="tags"><span>Git/GitHub</span><span>VS Code</span><span>Postman</span><span>Docker (Basics)</span></div>
+            <div class="tags"><span>Git/GitHub</span><span>VS Code</span><span>Postman</span><span>Docker
+                (Basics)</span></div>
           </div>
 
         </div>
@@ -247,7 +251,7 @@
         <div class="intern-grid">
 
           <div class="intern-card">
-            <span class="intern-date">Present</span>
+            <span class="intern-date">Feb - March 2026</span>
             <h3>SNS Square — Software Engineering Intern</h3>
             <p>Full Stack & AI Development</p>
             <ul>
@@ -284,163 +288,169 @@
     </section>
 
     <section class="section" id="achievements">
-  <div class="container">
-    <h2 class="section-title">Achievements</h2>
+      <div class="container">
+        <h2 class="section-title">Achievements</h2>
 
-    <ul class="achievements-list">
-      <li class="ach-item">
-        <span class="ach-icon yellow">🏆</span>
-        <p><strong>3rd Prize</strong> – Codeathon (FiESTAA’25, KPR Institute of Engineering and Technology) – Demonstrated strong problem-solving and coding skills in a competitive environment.</p>
-      </li>
+        <ul class="achievements-list">
+          <li class="ach-item">
+            <span class="ach-icon yellow">🏆</span>
+            <p><strong>3rd Prize</strong> – Codeathon (FiESTAA’25, KPR Institute of Engineering and Technology) –
+              Demonstrated strong problem-solving and coding skills in a competitive environment.</p>
+          </li>
 
-      <li class="ach-item">
-        <span class="ach-icon orange">🎖️</span>
-        <p><strong>Top 5 Finalist</strong> – Shark Tank Idea Pitch (Anna University, March 2026) – Presented an innovative AI-driven solution and secured a top position among competing teams.</p>
-      </li>
+          <li class="ach-item">
+            <span class="ach-icon orange">🎖️</span>
+            <p><strong>Top 5 Finalist</strong> – Shark Tank Idea Pitch (Anna University, March 2026) – Presented an
+              innovative AI-driven solution and secured a top position among competing teams.</p>
+          </li>
 
-      <li class="ach-item">
-        <span class="ach-icon pink">🚀</span>
-        <p><strong>Hackathon Finalist</strong> – Dev Heat 2026 (IIIT Surat) – Selected for the Grand Finale in a 24-hour national-level hackathon.</p>
-      </li>
+          <li class="ach-item">
+            <span class="ach-icon pink">🚀</span>
+            <p><strong>Hackathon Finalist</strong> – Dev Heat 2026 (IIIT Surat) – Selected for the Grand Finale in a
+              24-hour national-level hackathon.</p>
+          </li>
 
-      <li class="ach-item">
-        <span class="ach-icon blue">🚀</span>
-        <p><strong>Hackathon Finalist</strong> – IIT BHU Eco Hackathon 2026 – Shortlisted for the final round among multiple competing teams.</p>
-      </li>
+          <li class="ach-item">
+            <span class="ach-icon blue">🚀</span>
+            <p><strong>Hackathon Finalist</strong> – IIT BHU Eco Hackathon 2026 – Shortlisted for the final round among
+              multiple competing teams.</p>
+          </li>
 
-      <li class="ach-item">
-        <span class="ach-icon violet">💡</span>
-        <p><strong>Hackathon Shortlists</strong> – Namma Delta Hackathon 2026, Web Agent Hackathon 2026 (CIT)</p>
-      </li>
+          <li class="ach-item">
+            <span class="ach-icon violet">💡</span>
+            <p><strong>Hackathon Shortlists</strong> – Namma Delta Hackathon 2026, Web Agent Hackathon 2026 (CIT)</p>
+          </li>
 
-      <li class="ach-item">
-        <span class="ach-icon blue">⚡</span>
-        <p><strong>Active Hackathon Participant</strong> – Code O Clock 2025, Hack’24 (NGP IET), Anna University Hack IT 2.0</p>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="section" id="certifications">
-  <div class="container">
-    <h2 class="section-title">Certifications</h2>
-
-    <div class="cert-container">
-
-      <!-- RIGHT -->
-      <div class="cert-card right">
-        <h3 class="cert-title">Oracle Certified Professional</h3>
-        <span class="cert-tag">Java SE</span>
-        <p class="muted">
-          Validation of advanced Java programming expertise, covering performance optimization and memory management.
-        </p>
+          <li class="ach-item">
+            <span class="ach-icon blue">⚡</span>
+            <p><strong>Active Hackathon Participant</strong> – Code O Clock 2025, Hack’24 (NGP IET), Anna University
+              Hack IT 2.0</p>
+          </li>
+        </ul>
       </div>
+    </section>
 
-      <!-- LEFT -->
-      <div class="cert-card left">
-        <h3 class="cert-title">Agentforce Specialist</h3>
-        <span class="cert-tag">Salesforce AI</span>
-        <p class="muted">
-          Design and deployment of AI-powered service automation and autonomous agents in corporate environments.
-        </p>
-      </div>
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
 
-      <!-- RIGHT -->
-      <div class="cert-card right">
-        <h3 class="cert-title">Human Computer Interaction</h3>
-        <span class="cert-tag">NPTEL • Elite</span>
-        <p class="muted">
-          Mastered user-centered design principles, accessibility standards, and behavioral modeling.
-        </p>
-      </div>
+        <div class="cert-container">
 
-      <!-- LEFT -->
-      <div class="cert-card left">
-        <h3 class="cert-title">Programming in Java</h3>
-        <span class="cert-tag">NPTEL • Gold</span>
-        <p class="muted">
-          Advanced certification covering data structures, multithreading, and enterprise Java architectures.
-        </p>
-      </div>
+          <!-- RIGHT -->
+          <div class="cert-card right">
+            <h3 class="cert-title">Oracle Certified Professional</h3>
+            <span class="cert-tag">Java SE</span>
+            <p class="muted">
+              Validation of advanced Java programming expertise, covering performance optimization and memory
+              management.
+            </p>
+          </div>
 
-      <!-- RIGHT -->
-      <div class="cert-card right">
-        <h3 class="cert-title">Generative AI Concepts</h3>
-        <span class="cert-tag">Microsoft</span>
-        <p class="muted">
-          Foundations of LLMs, prompt engineering, and ethical AI integration in modern software stacks.
-        </p>
-      </div>
+          <!-- LEFT -->
+          <div class="cert-card left">
+            <h3 class="cert-title">Agentforce Specialist</h3>
+            <span class="cert-tag">Salesforce AI</span>
+            <p class="muted">
+              Design and deployment of AI-powered service automation and autonomous agents in corporate environments.
+            </p>
+          </div>
 
-      <!-- LEFT -->
-      <div class="cert-card left">
-        <h3 class="cert-title">Generative AI Fundamentals</h3>
-        <span class="cert-tag">Databricks</span>
-        <p class="muted">
-          Practical application of GenAI workflows, model training basics, and real-world AI deployment.
-        </p>
-      </div>
+          <!-- RIGHT -->
+          <div class="cert-card right">
+            <h3 class="cert-title">Human Computer Interaction</h3>
+            <span class="cert-tag">NPTEL • Elite</span>
+            <p class="muted">
+              Mastered user-centered design principles, accessibility standards, and behavioral modeling.
+            </p>
+          </div>
 
-    </div>
-  </div>
-</section>
+          <!-- LEFT -->
+          <div class="cert-card left">
+            <h3 class="cert-title">Programming in Java</h3>
+            <span class="cert-tag">NPTEL • Gold</span>
+            <p class="muted">
+              Advanced certification covering data structures, multithreading, and enterprise Java architectures.
+            </p>
+          </div>
 
+          <!-- RIGHT -->
+          <div class="cert-card right">
+            <h3 class="cert-title">Generative AI Concepts</h3>
+            <span class="cert-tag">Microsoft</span>
+            <p class="muted">
+              Foundations of LLMs, prompt engineering, and ethical AI integration in modern software stacks.
+            </p>
+          </div>
 
- <!-- CONTACT -->
-<section class="section pale" id="contact">
-  <div class="container contact-grid">
+          <!-- LEFT -->
+          <div class="cert-card left">
+            <h3 class="cert-title">Generative AI Fundamentals</h3>
+            <span class="cert-tag">Databricks</span>
+            <p class="muted">
+              Practical application of GenAI workflows, model training basics, and real-world AI deployment.
+            </p>
+          </div>
 
-    <!-- LEFT CONTACT CARDS -->
-    <div class="contact-cards">
-
-      <div class="info-card">
-        <div class="icon">📞</div>
-        <div class="info-text">
-          <p class="muted">Phone</p>
-          <p class="strong">9363641301</p>
         </div>
       </div>
+    </section>
 
-      <div class="info-card">
-        <div class="icon">✉️</div>
-        <div class="info-text">
-          <p class="muted">Email</p>
-          <p class="strong">shrijeevanyapriyaoffc@gmail.com</p>
+
+    <!-- CONTACT -->
+    <section class="section pale" id="contact">
+      <div class="container contact-grid">
+
+        <!-- LEFT CONTACT CARDS -->
+        <div class="contact-cards">
+
+          <div class="info-card">
+            <div class="icon">📞</div>
+            <div class="info-text">
+              <p class="muted">Phone</p>
+              <p class="strong">9363641301</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="icon">✉️</div>
+            <div class="info-text">
+              <p class="muted">Email</p>
+              <p class="strong">shrijeevanyapriyaoffc@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="icon">in</div>
+            <div class="info-text">
+              <p class="muted">LinkedIn</p>
+              <p class="strong">
+                <a href="https://www.linkedin.com/in/shri-jeevanya-priya-j/" target="_blank">
+                  Connect with me
+                </a>
+              </p>
+            </div>
+          </div>
+
         </div>
-      </div>
 
-      <div class="info-card">
-        <div class="icon">in</div>
-        <div class="info-text">
-          <p class="muted">LinkedIn</p>
-          <p class="strong">
-            <a href="https://www.linkedin.com/in/shri-jeevanya-priya-j/" target="_blank">
-              Connect with me
-            </a>
-          </p>
+        <!-- RIGHT CONTACT FORM -->
+        <div class="contact-form-container card big">
+          <h3>Get in touch</h3>
+
+          <form id="contactForm">
+            <label>Name<input type="text" name="name" required></label>
+            <label>Email<input type="email" name="email" required></label>
+            <label>Phone<input type="text" name="phone"></label>
+            <label>Message<textarea name="message" rows="6" required></textarea></label>
+            <button class="btn primary" type="submit">Send Message ✈️</button>
+            <div id="formMsg" class="form-msg"></div>
+          </form>
+
         </div>
+
       </div>
-
-    </div>
-
-    <!-- RIGHT CONTACT FORM -->
-    <div class="contact-form-container card big">
-      <h3>Get in touch</h3>
-
-      <form id="contactForm">
-        <label>Name<input type="text" name="name" required></label>
-        <label>Email<input type="email" name="email" required></label>
-        <label>Phone<input type="text" name="phone"></label>
-        <label>Message<textarea name="message" rows="6" required></textarea></label>
-        <button class="btn primary" type="submit">Send Message ✈️</button>
-        <div id="formMsg" class="form-msg"></div>
-      </form>
-
-    </div>
-
-  </div>
-</section>
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -456,41 +466,42 @@
 
 
   <script>
-  // IntersectionObserver to reveal certificates on scroll
-  (function(){
-    const opts = { root: null, rootMargin: '0px', threshold: 0.12 };
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('in-view');
-          // optional: unobserve after revealed so animation runs once
+    // IntersectionObserver to reveal certificates on scroll
+    (function () {
+      const opts = { root: null, rootMargin: '0px', threshold: 0.12 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            // optional: unobserve after revealed so animation runs once
+            observer.unobserve(entry.target);
+          }
+        });
+      }, opts);
+
+      document.querySelectorAll('.cert-card').forEach(el => observer.observe(el));
+    })();
+
+
+    const observerOptions = {
+      threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
           observer.unobserve(entry.target);
         }
       });
-    }, opts);
+    }, observerOptions);
 
-    document.querySelectorAll('.cert-card').forEach(el => observer.observe(el));
-  })();
-
-
-  const observerOptions = {
-    threshold: 0.2
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll(".ach-item").forEach(item => observer.observe(item));
+    document.querySelectorAll(".ach-item").forEach(item => observer.observe(item));
 
 
-</script>
+  </script>
 
 
 </body>
+
 </html>
