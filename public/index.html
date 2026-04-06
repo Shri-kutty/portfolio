@@ -12,6 +12,14 @@
 </head>
 
 <body>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.body.classList.add('dark-mode');
+      }
+    })();
+  </script>
 
 <!-- LOADER -->
 <div id="loader" class="loader">
@@ -43,6 +51,11 @@
       <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
+
+    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+      <span class="sun-icon">☀️</span>
+      <span class="moon-icon">🌙</span>
+    </button>
   </div>
 </header>
 
@@ -55,8 +68,14 @@
 
         <div class="hero-left">
           <h1 class="hero-title">Hi, I'm <span class="name-gradient">Shri Jeevanya Priya</span></h1>
-          <p class="subtitle">Mobile App Developer</p>
-          <p class="intro">I am a passionate developer and lifelong learner, dedicated to building beautiful, functional, and user-centric digital experiences.</p>
+          <p class="subtitle">
+            <span class="typing-container">
+              <span class="typed-text"></span><span class="cursor">|</span>
+            </span>
+          </p>
+          <p class="intro">
+            A results-driven Full Stack Developer and AI Enthusiast. I specialize in building intelligent, scalable digital solutions that bridge the gap between complex AI models and user-centric applications.
+          </p>
 
           <div class="cta-row">
             <a id="downloadBtn" class="btn primary" href="/download-resume"><span>Download Resume</span></a>
@@ -85,9 +104,7 @@
 
     <div class="about-card">
       <p>
-        A dedicated and proactive individual seeking a responsible position in a reputable organization. 
-        I aim to deliver value through consistent efforts while continuously learning. 
-        I love contributing ideas, collaborating with teams, and growing professionally.
+        I am a 3rd-year Computer Science and Engineering student with a deep passion for building intelligent, full-stack digital solutions. My experience spans from developing robust MERN stack applications to integrating advanced AI/ML models into functional platforms. I believe in the power of technology to simplify complex problems, and I am dedicated to continuous learning and contributing innovative ideas to agile teams.
       </p>
     </div>
 
@@ -103,37 +120,43 @@
 
         <div class="skills-grid">
           <div class="skill-card">
-            <div class="icon"><></div>
-            <h3>Languages</h3>
+            <div class="icon">💻</div>
+            <h3>Frontend</h3>
             <div class="tags">
-              <span>Python</span><span>Core Java</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Dart</span>
+              <span>React.js</span><span>Next.js</span><span>Tailwind CSS</span><span>HTML5/CSS3</span><span>JavaScript (ES6+)</span>
             </div>
           </div>
 
           <div class="skill-card">
-            <div class="icon">🌐</div>
-            <h3>Frameworks / Libraries</h3>
+            <div class="icon">⚙️</div>
+            <h3>Backend</h3>
             <div class="tags">
-              <span>Streamlit</span><span>Flask</span><span>React Native</span><span>Flutter</span>
+              <span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>Java</span>
             </div>
           </div>
 
           <div class="skill-card">
             <div class="icon">🗄️</div>
             <h3>Database</h3>
-            <div class="tags"><span>MySQL (Basics)</span></div>
+            <div class="tags"><span>MongoDB</span><span>MySQL</span><span>Firebase</span></div>
           </div>
 
           <div class="skill-card">
-            <div class="icon">☁️</div>
-            <h3>Cloud & DevOps</h3>
-            <div class="tags"><span>AWS (Lambda, S3, API Gateway)</span></div>
+            <div class="icon">🧠</div>
+            <h3>AI/ML</h3>
+            <div class="tags"><span>LLM Integration</span><span>Prompt Engineering</span><span>Python</span><span>Image Processing</span></div>
+          </div>
+
+          <div class="skill-card">
+            <div class="icon">🚀</div>
+            <h3>Deployment</h3>
+            <div class="tags"><span>Vercel</span><span>Render</span><span>Netlify</span><span>AWS Basics</span></div>
           </div>
 
           <div class="skill-card">
             <div class="icon">🛠️</div>
             <h3>Tools</h3>
-            <div class="tags"><span>GitHub</span><span>VS Code</span><span>LeetCode</span><span>Canva</span></div>
+            <div class="tags"><span>Git/GitHub</span><span>VS Code</span><span>Postman</span><span>Docker (Basics)</span></div>
           </div>
 
         </div>
@@ -149,32 +172,68 @@
         <div class="projects-grid">
 
           <article class="project-card">
-            <div class="project-badge">F</div>
-            <h3>Freshify</h3>
-            <p>AI-powered freshness detection for fruits & vegetables using image analysis.</p>
+            <div class="project-badge">I</div>
+            <h3>IntelliLab</h3>
+            <p>AI-powered lab management system that automates resource tracking and assessments.</p>
+            <ul>
+              <li>Integrated LLMs for automated student reporting and resource forecasting.</li>
+              <li>Reduced manual overhead by 40% through automated scheduling and tracking.</li>
+            </ul>
             <div class="project-tags">
-              <span>AI/ML</span><span>Image Processing</span><span>Python</span>
+              <span>Next.js</span><span>Python</span><span>OpenAI API</span><span>PostgreSQL</span>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-badge">A</div>
-            <h3>AI Drug Discovery</h3>
-            <p>ML model to predict drug compounds and analyze molecular similarity.</p>
+            <div class="project-badge">M</div>
+            <h3>Mediqo</h3>
+            <p>AI-driven health triage platform providing preliminary clinical assessments.</p>
+            <ul>
+              <li>Used NLP to analyze symptoms with high accuracy for triage prioritization.</li>
+              <li>Integrated real-time appointment booking with seamless hospital routing.</li>
+            </ul>
             <div class="project-tags">
-              <span>Machine Learning</span><span>Bioinformatics</span><span>Data Analysis</span>
+              <span>React</span><span>Node.js</span><span>Flask</span><span>MongoDB</span>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-badge">A</div>
-            <h3>AI Meeting Buddy</h3>
-            <p>Virtual assistant that summarizes meetings and tracks tasks.</p>
+            <div class="project-badge">C</div>
+            <h3>CareVault</h3>
+            <p>Secure AI Healthcare platform for automated prescription and history analysis.</p>
+            <ul>
+              <li>Implemented OCR for high-speed medical prescription data extraction.</li>
+              <li>Developed context-aware clinical analysis using customized LLM pipelines.</li>
+            </ul>
             <div class="project-tags">
-              <span>NLP</span><span>Automation</span><span>Productivity</span>
+              <span>MERN Stack</span><span>Tesseract.js</span><span>AWS Lambda</span>
             </div>
           </article>
 
+        </div>
+
+        <!-- TECH HIGHLIGHTS -->
+        <div class="tech-highlights" style="margin-top: 60px;">
+          <h2 class="section-title">Technical Highlights</h2>
+          <p class="muted">Key expertise and specialized technical capabilities</p>
+          <div class="tech-highlights-grid">
+            <div class="highlight-card">
+              <h3>LLM Integration</h3>
+              <p>Built multiple AI-powered applications with seamless LLM API integrations for real-world impact.</p>
+            </div>
+            <div class="highlight-card">
+              <h3>Secure Auth</h3>
+              <p>Implemented robust JWT and OAuth 2.0 authentication systems for secure data handling.</p>
+            </div>
+            <div class="highlight-card">
+              <h3>Scalable Cloud</h3>
+              <p>Experience in building and deploying scalable cloud Native infrastructure on AWS and Vercel.</p>
+            </div>
+            <div class="highlight-card">
+              <h3>Real-time Systems</h3>
+              <p>Engineered high-performance real-time data synchronization for complex web platforms.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -188,22 +247,35 @@
         <div class="intern-grid">
 
           <div class="intern-card">
-            <span class="intern-date">Jan – Apr 2025</span>
-            <h3>Eazibiz Technologies Pvt Ltd — App Development Intern</h3>
+            <span class="intern-date">Present</span>
+            <h3>SNS Square — Software Engineering Intern</h3>
+            <p>Full Stack & AI Development</p>
             <ul>
-              <li>Developed a Leave Submission app</li>
-              <li>React Native + Android Studio</li>
-              <li>Automated approval → notifications → HOD routing</li>
+              <li>Architecting scalable modules using the MERN stack with modern UI/UX.</li>
+              <li>Engineered AI-driven chat functionalities and automated data workflows.</li>
+              <li>Collaborating with cross-functional teams to integrate real-world LLM APIs.</li>
+            </ul>
+          </div>
+
+          <div class="intern-card">
+            <span class="intern-date">Jan – Apr 2025</span>
+            <h3>Eazibiz Technologies — Mobile App Intern</h3>
+            <p>React Native Development</p>
+            <ul>
+              <li>Optimized a cross-platform Leave Submission platform for internal operations.</li>
+              <li>Implemented automated approval routing and real-time push notifications.</li>
+              <li>Enhanced app performance by 25% through codebase optimization.</li>
             </ul>
           </div>
 
           <div class="intern-card">
             <span class="intern-date">Aug 2024</span>
-            <h3>Techsnapie Solutions — AWS Intern</h3>
+            <h3>Techsnapie Solutions — AWS Cloud Intern</h3>
+            <p>Cloud Infrastructure & DevOps</p>
             <ul>
-              <li>Hands-on AWS during 14 days</li>
-              <li>Deployed cloud resources efficiently</li>
-              <li>Worked with S3, Lambda and API Gateway</li>
+              <li>Managed and deployed cloud resources using AWS S3, Lambda, and API Gateway.</li>
+              <li>Established CI/CD pipelines to streamline cloud-native application delivery.</li>
+              <li>Automated serverless functions to handle high-concurrency API requests.</li>
             </ul>
           </div>
 
@@ -218,27 +290,32 @@
     <ul class="achievements-list">
       <li class="ach-item">
         <span class="ach-icon yellow">🏆</span>
-        <p>1st Prize – Technical Quiz (FiESTAA’25, KPR Institute of Engineering and Technology)</p>
+        <p><strong>3rd Prize</strong> – Codeathon (FiESTAA’25, KPR Institute of Engineering and Technology) – Demonstrated strong problem-solving and coding skills in a competitive environment.</p>
       </li>
 
       <li class="ach-item">
         <span class="ach-icon orange">🎖️</span>
-        <p>3rd Prize – Codeathon (FiESTAA’25, KPR IET)</p>
+        <p><strong>Top 5 Finalist</strong> – Shark Tank Idea Pitch (Anna University, March 2026) – Presented an innovative AI-driven solution and secured a top position among competing teams.</p>
       </li>
 
       <li class="ach-item">
-        <span class="ach-icon pink">🎀</span>
-        <p>Participated in WWT Women-Only Hackathon 2025</p>
+        <span class="ach-icon pink">🚀</span>
+        <p><strong>Hackathon Finalist</strong> – Dev Heat 2026 (IIIT Surat) – Selected for the Grand Finale in a 24-hour national-level hackathon.</p>
       </li>
 
       <li class="ach-item">
-        <span class="ach-icon blue">🎽</span>
-        <p>Participated in Code O Clock – 24-hour hackathon</p>
+        <span class="ach-icon blue">🚀</span>
+        <p><strong>Hackathon Finalist</strong> – IIT BHU Eco Hackathon 2026 – Shortlisted for the final round among multiple competing teams.</p>
       </li>
 
       <li class="ach-item">
-        <span class="ach-icon violet">🥇</span>
-        <p>Participated in TiDB hackathon</p>
+        <span class="ach-icon violet">💡</span>
+        <p><strong>Hackathon Shortlists</strong> – Namma Delta Hackathon 2026, Web Agent Hackathon 2026 (CIT)</p>
+      </li>
+
+      <li class="ach-item">
+        <span class="ach-icon blue">⚡</span>
+        <p><strong>Active Hackathon Participant</strong> – Code O Clock 2025, Hack’24 (NGP IET), Anna University Hack IT 2.0</p>
       </li>
     </ul>
   </div>
@@ -253,73 +330,55 @@
 
       <!-- RIGHT -->
       <div class="cert-card right">
-        <h3 class="cert-title">Agentfore Specialist</h3>
-        <span class="cert-tag">Salesforce</span>
+        <h3 class="cert-title">Oracle Certified Professional</h3>
+        <span class="cert-tag">Java SE</span>
         <p class="muted">
-          Understand AI-powered service automation and think beyond theory into real-world application.
+          Validation of advanced Java programming expertise, covering performance optimization and memory management.
         </p>
       </div>
 
       <!-- LEFT -->
       <div class="cert-card left">
+        <h3 class="cert-title">Agentforce Specialist</h3>
+        <span class="cert-tag">Salesforce AI</span>
+        <p class="muted">
+          Design and deployment of AI-powered service automation and autonomous agents in corporate environments.
+        </p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="cert-card right">
         <h3 class="cert-title">Human Computer Interaction</h3>
-        <span class="cert-tag">NPTEL • 86%</span>
+        <span class="cert-tag">NPTEL • Elite</span>
         <p class="muted">
-          Studied user-centered design, usability principles, and human–computer interaction models.
+          Mastered user-centered design principles, accessibility standards, and behavioral modeling.
         </p>
       </div>
 
-      <!-- RIGHT -->
-      <div class="cert-card right">
+      <!-- LEFT -->
+      <div class="cert-card left">
         <h3 class="cert-title">Programming in Java</h3>
-        <span class="cert-tag">NPTEL • 90%</span>
+        <span class="cert-tag">NPTEL • Gold</span>
         <p class="muted">
-          Covered OOP concepts, exception handling, collections, multithreading, and Java fundamentals.
-        </p>
-      </div>
-
-      <!-- LEFT -->
-      <div class="cert-card left">
-        <h3 class="cert-title">Introduction to Generative AI Concepts</h3>
-        <span class="cert-tag">Microsoft • June 2025</span>
-        <p class="muted">
-          Learned foundations of Generative AI, LLMs, prompt engineering, and real-world AI applications.
+          Advanced certification covering data structures, multithreading, and enterprise Java architectures.
         </p>
       </div>
 
       <!-- RIGHT -->
       <div class="cert-card right">
-        <h3 class="cert-title">Python for Placement Readiness</h3>
-        <span class="cert-tag">ByteXL • August 2025</span>
+        <h3 class="cert-title">Generative AI Concepts</h3>
+        <span class="cert-tag">Microsoft</span>
         <p class="muted">
-          Strengthened Python problem-solving skills focused on placement-level coding questions.
-        </p>
-      </div>
-
-      <!-- LEFT -->
-      <div class="cert-card left">
-        <h3 class="cert-title">Basic Data Structures and Algorithms</h3>
-        <span class="cert-tag">ByteXL • September 2025</span>
-        <p class="muted">
-          Learned arrays, linked lists, stacks, queues, searching, and sorting techniques.
-        </p>
-      </div>
-
-      <!-- RIGHT -->
-      <div class="cert-card right">
-        <h3 class="cert-title">Basic DBMS</h3>
-        <span class="cert-tag">ByteXL • September 2025</span>
-        <p class="muted">
-          Covered database concepts, SQL basics, normalization, and relational database design.
+          Foundations of LLMs, prompt engineering, and ethical AI integration in modern software stacks.
         </p>
       </div>
 
       <!-- LEFT -->
       <div class="cert-card left">
         <h3 class="cert-title">Generative AI Fundamentals</h3>
-        <span class="cert-tag">Databricks • August 2025</span>
+        <span class="cert-tag">Databricks</span>
         <p class="muted">
-          Explored GenAI workflows, model training basics, and real-world AI deployment concepts.
+          Practical application of GenAI workflows, model training basics, and real-world AI deployment.
         </p>
       </div>
 

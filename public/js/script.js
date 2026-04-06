@@ -66,4 +66,54 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  /* ---------------- THEME TOGGLE ------------------- */
+  const themeToggle = document.getElementById("themeToggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      const theme = document.body.classList.contains("dark-mode") ? "dark" : "light";
+      localStorage.setItem("theme", theme);
+    });
+  }
+
+  /* ---------------- TYPING ANIMATION ------------------- */
+  const typedSpan = document.querySelector(".typed-text");
+  const cursorSpan = document.querySelector(".cursor");
+  const words = ["Full Stack Developer", "AI Enthusiast", "Problem Solver"];
+  const typingDelay = 150;
+  const erasingDelay = 80;
+  const newWordDelay = 2000;
+  let wordIndex = 0;
+  let charIndex = 0;
+
+  function type() {
+    if (charIndex < words[wordIndex].length) {
+      if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+      typedSpan.textContent += words[wordIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingDelay);
+    } else {
+      cursorSpan.classList.remove("typing");
+      setTimeout(erase, newWordDelay);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+      typedSpan.textContent = words[wordIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, erasingDelay);
+    } else {
+      cursorSpan.classList.remove("typing");
+      wordIndex++;
+      if (wordIndex >= words.length) wordIndex = 0;
+      setTimeout(type, typingDelay + 1100);
+    }
+  }
+
+  if (typedSpan) {
+    setTimeout(type, newWordDelay + 250);
+  }
 });
